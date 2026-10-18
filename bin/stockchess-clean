@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import os
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+from stockchess.main import main_clean
+sys.exit(main_clean())

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stockchess"
+version = "0.1.0"
+description = "Terminal chess: two engines play each other, rendered in your terminal."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "stockchess contributors" }]
+dependencies = [
+    "python-chess>=1.99.0",
+    "blessed>=1.20.0",
+]
+
+[project.scripts]
+stockchess = "stockchess.main:main"
+stockchess-clean = "stockchess.main:main_clean"
+stockchess-theme = "stockchess.theme:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stockchess*"]
